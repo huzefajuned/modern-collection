@@ -1,0 +1,526 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+/* ///////////..utility classes../////////// */
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+/* desktop mode............/// */
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+.navbar {
+    margin: 0px 2px 2px 2px;
+  box-shadow: 0px 5px 10px 0px rgb(10, 10, 10);
+  position: fixed;
+  width: 100%;
+  background: rgb(17, 160, 76);
+  height: 80px;
+  z-index: 12;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+}
+.menu-items {
+  margin-top: 10px;
+  order:2;
+  display: flex;
+}
+.menu-items li {
+  list-style: none;
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+.menu-items a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.menu-items a:hover {
+  color: #117964;
+  transition: color 0.3s ease-in-out;
+}
+.navbar .logo{
+
+  color: rgb(245, 240, 245);
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* shop images */
+.carousel .carousel-item {
+  height: 500px;
+}
+
+.carousel-item img {
+    position: absolute;
+    object-fit:cover;
+    top:85px;
+    left: 0;
+    min-height: 500px;
+}
+/* .carousel-inner h5,p{
+  
+}  */
+/* ......//about us//...... */
+#about {
+  padding: 50px 0;
+  background: #1b1bd4;
+}
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-img {
+  flex:300px;
+  margin-top: 50px;
+  padding: 10px;
+  transform: scale(1.5);
+  /* box-shadow: 0 0 10px rgba(14, 10, 10, 0.5);   */
+  animation: about-img-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-img-animation {
+    100% {
+      transform: translate(0);
+    }
+  }
+  .about-img img {
+    display: block;
+    height: 400px;
+    max-width: 100%;
+    margin: auto;
+    object-fit: cover;
+    object-position: right;
+  }
+/* shop owner images here!!! */
+
+#owner {
+    padding: 10px 0;
+  }
+  .owner-wrapper {
+    display: flex;
+  }
+  .owner-img {
+    flex:90%;
+    /* transform: scale(1.5); */
+    /* animation: about-img-animation 1s ease-in-out forwards; */
+  }
+  .owner-img img {
+    display: inline-block;
+    height: 250px;
+    max-width: 90%;
+    border-radius: 0px;
+    margin: 10px;
+    object-fit: cover;
+  }
+  .owner-img:hover{
+      transition: translateY(-1.7rem);
+  }
+
+
+
+/* ..........////CLOTHES CATEGORY///........... */
+ #cloth {
+    padding: 50px 0;
+    /* background: #0f0fd3; */
+  } 
+  .cloth-item {
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  
+  
+  .cloth-img {
+    flex: 400px;
+    margin-top: 0px;
+    padding:0px;
+    border-radius: 10px;
+    transform: scale(1.5);
+    animation: about-img-animation 1s ease-in-out forwards;
+  }
+  .cloth-img img {
+
+    display: block;
+    height: 200px;
+    max-width:1 00%;
+    margin: auto;
+    object-fit: cover;
+    object-position: right;
+  }
+  @keyframes cloth-img-animation {
+    50% {
+      transform: translate(0);
+    }
+  }
+
+   /* footer */
+
+  .footer{
+
+    align-items: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #f5f5f7;
+    background-color: darkslategray;
+    font-size:12px;
+  }
+
+  /* contact form */
+  .shop-address{
+    background-color: rgb(13, 197, 151);
+    display: flex;
+    align-items: center;
+  }
+  .address{
+    width: 50%;
+    display: block;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+    color: rgb(247, 244, 241);
+  }
+  .form{
+    padding: 2px;
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+  }
+  .dovelope{
+    margin-left: 150px;
+
+  }
+  .social{
+    display: flex;
+    margin:20px;
+    float: right;
+    margin-left: 150px;
+   }
+   .insta{
+     display: flex;
+     margin-left: 100px;
+   }
+   
+/* ......../ media query /.......... */
+
+@media (max-width: 840px) {
+  .navbar {
+    opacity: 0.95;
+  }
+
+  .navbar-container input[type="checkbox"],
+  .navbar-container .hamburger-lines {
+    display: block;
+  }
+
+  .navbar-container {
+    display: block;
+    position: relative;
+    height: 64px;
+  }
+
+  .navbar-container input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+  }
+
+  .navbar-container .hamburger-lines {
+    display: block;
+    height: 23px;
+    width: 35px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #333;
+  }
+
+  .navbar-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .navbar .menu-items {
+    padding-top: 100px;
+    background: rgb(233, 217, 217);
+    height: 100vh;
+    max-width: 800px;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 5px 0px 10px 0px #aaa;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  .logo {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 2rem;
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(35deg);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-35deg);
+  }
+
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 65%;
+  }
+
+  .navbar .menu-items li{
+      font-size: 5.6rem;
+  }
+  .navbar .logo{  
+
+    color: rgb(124, 25, 124);
+    font-size: 24px;
+    margin-top: 13px;
+    font-weight: bold;
+  }
+
+
+  .navbar .menu-items li {
+    margin-bottom: 2.5rem;
+    font-size: 5.0rem;
+    font-weight: 400;
+  }
+  
+
+/* ..........////CLOTHES CATEGORY///........... */
+#cloth {
+  padding: 50px 0;
+  /* background: #0f0fd3; */
+} 
+.cloth-item {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.cloth-img {
+  flex: 100px;
+  margin-top: 0px;
+  padding:0px;
+  border-radius: 10px;
+  transform: scale(1.5);
+  animation: about-img-animation 1s ease-in-out forwards;
+}
+.cloth-img img {
+  display: flex;
+  height: 150px;
+  max-width:1 00%;
+  margin: auto;
+  object-fit: cover;
+  object-position: right;
+}
+.shop-address{
+  display: flex;
+  align-items: center;
+}
+.contact-form{
+  font-size: 5px;
+}
+.contact-form h1{
+  color: #117964;
+  font-size: 10px;
+}
+.address{
+  width: 50%;
+  display: block;
+  font-size: 10px;
+  align-items: center;
+  text-align: center;
+  color: rgb(247, 244, 241);
+}
+.dovelope{
+  margin-left: 50px;
+
+}
+.social{
+  display: flex;
+  margin:5px;
+  float: right;
+  margin-left: 50px;
+ }
+ .insta{
+   display: flex;
+   margin-left: 50px;
+ }
+
+
+
+.carousel .carousel-item {
+min-height: 100px;}
+
+.carousel-item img {
+    position: absolute;
+    object-fit:cover;
+    top:85px;
+    left: 0;
+
+
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  .img-container h3 {
+    font-size: 1.5rem;
+  }
+
+  .img-container .btn {
+    font-size: 0.7rem;
+  }
+  .logo {
+  float: left;
+  margin-top: 8px; 
+  color: rgb(247, 52, 3);
+  font-size:2.3rem;
+}
+.dovelope{
+  margin-left: 50px;
+
+}
+.social{
+  display: flex;
+  margin:5px;
+  float: right;
+  margin-left: 50px;
+ }
+ .insta{
+   display: flex;
+   margin-left: 50px;
+ }
+
+
+ .navbar .menu-items li {
+  margin-bottom: 2.5rem;
+  font-size: 7.0rem;
+  font-weight: 400;
+}
+
+
+}
+
+ @media (orientation: landscape) and (max-height: 500px) {
+  .showcase-area {
+    height: 50vmax;
+  }
+
+
+  .navbar .menu-items li {
+    margin-bottom: 0.5rem;
+    font-size: 4.0rem;
+    font-weight: 400;
+  }
+}
+  /* ..........////CLOTHES CATEGORY///........... */
+#cloth { 
+  padding: 50px 0;
+  /* background: #0f0fd3; */
+} 
+.cloth-item {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.cloth-img {
+  
+  flex: 100px;
+  margin-top: 0px;
+  padding:0px;
+  border-radius: 10px;
+  transform: scale(1.5);
+  animation: about-img-animation 1s ease-in-out forwards;
+}
+.cloth-img img {
+  display: flex;
+  height: 150px;
+  max-width:1 00%;
+  margin: auto;
+  object-fit: cover;
+  object-position: right;
+  
+}
+.dovelope{
+  margin-left: 50px;
+
+}
+.social{
+  display: flex;
+  margin:5px;
+  float: right;
+  margin-left: 50px;
+ }
+ .insta{
+   display: flex;
+   margin-left: 50px;
+ }
+} 
